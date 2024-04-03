@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenda</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #522b60; /* colore viola */
+            color: #e62a26; /* colore rosso */
+            font-size: 15pt;
+            font-family: 'Space Mono', monospace;
+        }
+        .progetti {
+            padding: 20px;
+            position: relative; /* Aggiunto */
+            min-height: 100vh; /* Aggiunto */
+        }
+        .progetto {
+            margin-bottom: 20px;
+        }
+        .indietro {
+            padding: 10px 20px;
+            border: 2px solid #e62a26; /* colore rosso */
+            background-color: #522b60; /* colore viola */
+            color: #e62a26; /* colore rosso */
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            position: absolute; /* Modificato */
+            bottom: 20px;
+            left: 20px;
+        }
+        .indietro:hover {
+            background-color: #e62a26; /* colore rosso */
+            color: #522b60; /* colore viola */
+        }
+        .progetto-link {
+            position: relative;
+            color: #e62a26;
+            text-decoration: none;
+        }
+        .progetto-link span {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            display: none;
+        }
+        .progetto-link:hover span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="progetti">
+        <div class="progetto">
+            <a href="in_corso.html" class="progetto-link">In Corso<span>Nessun progetto in corso</span></a>
+            <a href="in_futuro.html" class="progetto-link">In Futuro<span>Nessun progetto in futuro</span></a>
+        </div>
+    </div>
+    <a href="index.html" class="indietro">Indietro</a> <!-- Spostato fuori da .progetti -->
+
+</body>
+</html>

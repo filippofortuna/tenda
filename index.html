@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenda</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* colore di sfondo bianco */
+            font-family: 'Space Mono', monospace;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        #header img {
+            width: 150px; /* Dimensione dell'immagine */
+            height: auto; /* Lascia che l'altezza si adatti proporzionalmente alla larghezza */
+        }
+        .sezione {
+            font-size: 15pt;
+            padding: 15px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .sezione:hover {
+            text-decoration: underline;
+        }
+        .lingua {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 15pt;
+        }
+        .lingua select {
+            border: 2px solid #000;
+            background-color: #fff;
+            padding: 5px 10px;
+            font-family: 'Space Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="logo_tenda.png" alt="Logo Tenda"> <!-- Sostituisci "logo_tenda.png" con il percorso e il nome del tuo file immagine -->
+        <a href="contatti.html" class="sezione" id="contatti">Contatti</a>
+        <a href="progetti.html" class="sezione" id="progetti">Progetti/Mostre</a>
+    </div>
+
+    <div class="lingua">
+        <select onchange="cambiaLingua(this.value)">
+            <option value="it">Italiano</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+
+    <script>
+        function cambiaLingua(lingua) {
+            if (lingua === 'en') {
+                document.getElementById('contatti').innerText = 'Contacts';
+                document.getElementById('progetti').innerText = 'Projects/Shows';
+                window.location.href = 'index_en.html'; // Cambia la pagina alla versione inglese
+            } else {
+                document.getElementById('contatti').innerText = 'Contatti';
+                document.getElementById('progetti').innerText = 'Progetti/Mostre';
+                window.location.href = 'index.html'; // Rimane sulla pagina italiana
+            }
+        }
+    </script>
+</body>
+</html>

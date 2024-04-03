@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* colore di sfondo bianco */
+            font-family: 'Space Mono', monospace;
+            font-size: 12pt;
+        }
+        #contenuto {
+            padding: 20px;
+            float: left;
+        }
+        #indietro-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        #indietro {
+            font-size: 12pt;
+            padding: 10px 20px;
+            border: 2px solid black;
+            background-color: white;
+            cursor: pointer;
+            font-family: 'Space Mono', monospace;
+        }
+        #indietro:hover {
+            background-color: #f0f0f0;
+        }
+        #immagine {
+            float: right;
+            width: 70%; /* Dimensione dell'immagine */
+            padding: 20px;
+            text-align: center;
+        }
+        #immagine img {
+            width: 100%; /* Occupa tutta la larghezza del contenitore */
+            height: auto; /* Lascia che l'altezza si adatti proporzionalmente alla larghezza */
+            display: block; /* Per garantire che l'immagine sia centrata */
+            margin: 0 auto; /* Centra l'immagine orizzontalmente */
+        }
+    </style>
+</head>
+<body>
+    <div id="contenuto">
+        <p><a href="https://www.google.it/maps/place/Via+Guglielmo+Pepe,+16,+20159+Milano+MI/@45.4862175,9.1836717,17z/data=!3m1!4b1!4m6!3m5!1s0x4786c1320d77d537:0xca46be9dd311ca8a!8m2!3d45.4862175!4d9.1862466!16s%2Fg%2F11dz_1cbc1?entry=ttu">
+            via pepe, 16 Milano 20159
+        </a></p>
+        <p>tel. +39 366 9743747</p>
+        
+        <div id="indietro-container">
+            <button id="indietro" onclick="window.history.back();">
+                Indietro
+            </button>
+        </div>
+    </div>
+
+    <div id="immagine">
+        <img src="dove_siamo.png" alt="Dove Siamo">
+    </div>
+</body>
+</html>
